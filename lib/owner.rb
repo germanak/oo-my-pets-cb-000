@@ -1,3 +1,48 @@
+require 'pry'
+
 class Owner
   # code goes here
+  attr_accessor :name
+  attr_reader :species
+
+  @@all = []
+  @@owner_count = 0
+
+  def initialize(species)
+    @species = species
+    self.class.all << self
+    @@owner_count += 1
+    @pets = {:fishes => [], :dogs => [], :cats => []}
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.reset_all
+    self.all.clear
+    @@owner_count = 0
+  end
+
+  def self.count
+    @@owner_count
+  end
+
+  def say_species
+    "I am a #{self.species}."
+  end
+
+  def pets
+    @pets
+  end
+
+  def buy_fish(name)
+    fish = Fish.new(name)
+    @pets[:fishes] << fish
+  end
+
+  def buy_dog(name)
+    dog = Dog.new(name)
+    @pets[:fishes] << fish
+  end
 end
