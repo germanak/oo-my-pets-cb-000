@@ -67,7 +67,7 @@ class Owner
     self.pets.clear
 
     self.pets.each do |species, pet_data|
-      binding.pry
+      
     end
   end
 end
