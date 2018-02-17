@@ -67,7 +67,7 @@ class Owner
     self.pets.clear
 
     self.pets.each do |species, pet_data|
-
+      pet_data.each {|pet| pet.mood = "nervous"}
     end
   end
 end
