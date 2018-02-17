@@ -50,4 +50,8 @@ class Owner
     cat = Cat.new(name)
     @pets[:cats] << cat
   end
+
+  def walk_dogs
+
+  end
 end
