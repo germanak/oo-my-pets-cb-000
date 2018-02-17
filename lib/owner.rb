@@ -59,4 +59,3 @@ class Owner
     @pets[:cats].each {|cat| cat.mood = "happy"}
   end
 end
-
